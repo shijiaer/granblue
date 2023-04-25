@@ -1,0 +1,71 @@
+<!-- Copyright 2017 The Chromium Authors. All rights reserved.
+Use of this source code is governed by a BSD-style license that can be
+found in the LICENSE file. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FA Popup</title>
+    <style>
+      body {
+        text-align: center;
+      }
+
+      #TitleImage {
+        width: 100px;
+        margin: 5px;
+      }
+
+      .css-switch {
+        width: 57px;
+        height: 28px;
+        position: relative;
+        border: 1px solid #dfdfdf;
+        background-color: #DCDFE6;
+        box-shadow: #dfdfdf 0 0 0 0 inset;
+        border-radius: 20px;
+        background-clip: content-box;
+        display: inline-block;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        user-select: none;
+        outline: none;
+        vertical-align: middle;
+        margin-bottom: 10px;
+      }
+
+      .css-switch::before {
+        content: '';
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        left: 2px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transition: .3s;
+      }
+
+      .css-switch:checked {
+        background-color: #409EFF;
+        transition: .6s;
+      }
+
+      .css-switch:checked::before {
+        left: 30px;
+        transition: .3s;
+      }
+    </style>
+    <!--
+      - JavaScript and HTML must be in separate files
+     -->
+  </head>
+  <body>
+    <img src="./fa_notice.png" id="TitleImage" />
+<!--    <input id="Url" type="text" />-->
+      <input id="Start1" type="checkbox" class="css-switch" unchecked/>
+    <script src="popup.js"></script>
+  </body>
+</html>

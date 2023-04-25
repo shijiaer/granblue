@@ -1,0 +1,21 @@
+{
+  "name": "GBF FA Notification",
+  "description": "",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["alarms", "notifications", "storage", "cookies", "tabs", "offscreen"],
+  "host_permissions" : [
+    "*://*/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "FA Over Event",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "fa_128.png"
+  }
+}
